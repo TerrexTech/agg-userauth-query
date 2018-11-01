@@ -166,17 +166,14 @@ var _ = Describe("UserAggregate", func() {
 					Expect(kr.CorrelationID).To(Equal(mockEvent.CorrelationID))
 					Expect(kr.UUID).To(Equal(mockEvent.TimeUUID))
 
-					result := []user.User{}
-					err = json.Unmarshal(kr.Result, &result)
+					result := &user.User{}
+					err = json.Unmarshal(kr.Result, result)
 					Expect(err).ToNot(HaveOccurred())
 
-					for _, r := range result {
-						if r.UserID == mockUser.UserID {
-							mockUser.ID = r.ID
-							Expect(r).To(Equal(*mockUser))
-							return true
-						}
-					}
+					Expect(result.UserID).To(Equal(mockUser.UserID))
+					mockUser.ID = result.ID
+					Expect(result).To(Equal(mockUser))
+					return true
 				}
 				return false
 			}

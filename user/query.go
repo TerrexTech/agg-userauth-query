@@ -39,7 +39,7 @@ func Query(collection *mongo.Collection, event *model.Event) *model.KafkaRespons
 		}
 	}
 
-	result, err := collection.Find(filter)
+	result, err := collection.FindOne(filter)
 	if err != nil {
 		err = errors.Wrap(err, "Query: Error in DeleteMany")
 		log.Println(err)

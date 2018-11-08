@@ -46,11 +46,11 @@ sleep 5
 
 docker-compose up -d --build --force-recreate go-eventstore-query
 echo "Waiting for go-eventstore-query to initialize"
-sleep 5
+sleep 10
 
 docker-compose up -d --build --force-recreate agg-userauth-cmd
 echo "Waiting for agg-userauth-cmd to initialize"
-sleep 5
+sleep 10
 
 docker-compose up -d --build --force-recreate agg-userauth-query
 sleep 5

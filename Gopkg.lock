@@ -10,14 +10,6 @@
   version = "v1.19.0"
 
 [[projects]]
-  branch = "master"
-  digest = "1:dc503fb011e5d778fe8a0c8d9f048569a2c64dd4ec174fb46c048149cf55f788"
-  name = "github.com/TerrexTech/agg-userauth-cmd"
-  packages = ["user"]
-  pruneopts = "UT"
-  revision = "f10555babc6b6fd398a426e6496aed84f52ba096"
-
-[[projects]]
   digest = "1:9e040726ee775fa241bf96d3c11533a5312d9bcb00a594b63679bff456a4522c"
   name = "github.com/TerrexTech/go-commonutils"
   packages = ["commonutil"]
@@ -26,23 +18,23 @@
   version = "v3.1.0"
 
 [[projects]]
-  digest = "1:d546e8d64b0b7a3e4ef399b00cb37a839697adfb1392e21b7726cc9c5404e53f"
+  digest = "1:b374152c0b4b0dff7c0236ed48d0fdee003e009876dbd7cb642d9b4a7f884f2b"
   name = "github.com/TerrexTech/go-eventspoll"
   packages = [
     "errors",
     "poll",
   ]
   pruneopts = "UT"
-  revision = "ba822cac45b6a3e425ffcd9d7a35c04abc440e8b"
-  version = "v3.0.1"
+  revision = "c2c40a442eab5325df33f65f6d7aacfee5bbf944"
+  version = "v4.0.0"
 
 [[projects]]
-  digest = "1:dee9ede39c2d6dd372cf8ac6df7e2051989c36a1d91565f7b40f4aef432979c5"
+  digest = "1:4d3876e2ce747cfeded59a1210056e894d2593b73e843454a19d7f845afad23e"
   name = "github.com/TerrexTech/go-eventstore-models"
   packages = ["model"]
   pruneopts = "UT"
-  revision = "309bc2e4adb405313be36883daf2b8a7ce09bba9"
-  version = "v3.0.0"
+  revision = "4d0913b6357bca72d45064058f63c02d20c9e2c0"
+  version = "v4.0.0"
 
 [[projects]]
   digest = "1:017b08c994a864ea4e94f1837037c14087f784a1e99d54173eba9050f7a81f74"
@@ -118,7 +110,7 @@
 
 [[projects]]
   branch = "master"
-  digest = "1:64609c53991a461bd1ebd4d398cc930be8ba5d441d2a02b73f94c40a66ef93db"
+  digest = "1:348bbd07b4a983b2f811f81948c78142de09bb9fcf25284bee5e2ab3bdd0f6f9"
   name = "github.com/gocql/gocql"
   packages = [
     ".",
@@ -127,7 +119,7 @@
     "internal/streams",
   ]
   pruneopts = "UT"
-  revision = "a84ce58083d3d907fb0d94290d088a1fcd9cd858"
+  revision = "68ae1e384be4d7cd7df0f5b77f331759d806308e"
 
 [[projects]]
   digest = "1:c594a691090b434d55c67f6cc8e326ef5ba49452abc059821bd5d4fd4cdef08c"
@@ -332,39 +324,38 @@
   name = "golang.org/x/crypto"
   packages = ["pbkdf2"]
   pruneopts = "UT"
-  revision = "4d3f4d9ffa16a13f451c3b2999e9c49e9750bf06"
+  revision = "e4dc69e5b2fd71dcaf8bd5d054eb936deb78d1fa"
 
 [[projects]]
   branch = "master"
-  digest = "1:6d5ed712653ea5321fe3e3475ab2188cf362a4e0d31e9fd3acbd4dfbbca0d680"
+  digest = "1:5193d913046443e59093d66a97a40c51f4a5ea4ceba60f3b3ecf89694de5d16f"
   name = "golang.org/x/net"
   packages = [
-    "context",
     "html",
     "html/atom",
     "html/charset",
   ]
   pruneopts = "UT"
-  revision = "c44066c5c816ec500d459a2a324a753f78531ae0"
+  revision = "1c5f79cfb1642860bbe00b6cfce66700c01e04f6"
 
 [[projects]]
   branch = "master"
-  digest = "1:c313aef534e493304f3666fbd24dca5932ebf776a82b7a40f961c9355794a1b1"
+  digest = "1:d6b0cfc5ae30841c4b116ac589629f56f8add0955a39f11d8c0d06ca67f5b3d5"
   name = "golang.org/x/sync"
   packages = [
     "errgroup",
     "semaphore",
   ]
   pruneopts = "UT"
-  revision = "1d60e4601c6fd243af51cc01ddf169918a5407ca"
+  revision = "42b317875d0fa942474b76e1b46a6060d720ae6e"
 
 [[projects]]
   branch = "master"
-  digest = "1:466e5917ea5f69d435d0ab3015dc4b57b80d34a6caf1104097ac82ab462b86e4"
+  digest = "1:7ba061af4131fb44b30448572acd0d6fefbf63a61b97b7ef1dea0be5871c2742"
   name = "golang.org/x/sys"
   packages = ["unix"]
   pruneopts = "UT"
-  revision = "7e31e0c00fa05cb5fbf4347b585621d6709e19a4"
+  revision = "66b7b1311ac80bbafcd2daeef9a5e6e2cd1e2399"
 
 [[projects]]
   digest = "1:4392fcf42d5cf0e3ff78c96b2acf8223d49e4fdc53eb77c99d2f8dfe4680e006"
@@ -433,7 +424,6 @@
   analyzer-version = 1
   input-imports = [
     "github.com/Shopify/sarama",
-    "github.com/TerrexTech/agg-userauth-cmd/user",
     "github.com/TerrexTech/go-commonutils/commonutil",
     "github.com/TerrexTech/go-eventspoll/poll",
     "github.com/TerrexTech/go-eventstore-models/model",

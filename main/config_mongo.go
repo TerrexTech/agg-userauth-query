@@ -5,7 +5,7 @@ import (
 	"os"
 	"strconv"
 
-	"github.com/TerrexTech/agg-userauth-cmd/user"
+	"github.com/TerrexTech/agg-userauth-query/user"
 
 	"github.com/TerrexTech/go-commonutils/commonutil"
 	"github.com/TerrexTech/go-eventspoll/poll"

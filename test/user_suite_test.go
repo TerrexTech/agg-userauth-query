@@ -139,9 +139,6 @@ var _ = Describe("UserAggregate", func() {
 			mockEvent.UUID = UUID
 
 			Byf("Producing MockEvent")
-			p, err = kafka.NewProducer(&kafka.ProducerConfig{
-				KafkaBrokers: kafkaBrokers,
-			})
 			Expect(err).ToNot(HaveOccurred())
 			marshalEvent, err = json.Marshal(mockEvent)
 			Expect(err).ToNot(HaveOccurred())
@@ -160,7 +157,7 @@ var _ = Describe("UserAggregate", func() {
 				err := json.Unmarshal(msg.Value, kr)
 				Expect(err).ToNot(HaveOccurred())
 
-				if kr.UUID == mockEvent.UUID {
+				if kr.UUID.String() == mockEvent.UUID.String() && kr.Error == "" {
 					Expect(kr.Error).To(BeEmpty())
 					Expect(kr.ErrorCode).To(BeZero())
 					Expect(kr.CorrelationID).To(Equal(mockEvent.CorrelationID))
@@ -169,7 +166,6 @@ var _ = Describe("UserAggregate", func() {
 					result := &user.User{}
 					err = json.Unmarshal(kr.Result, result)
 					Expect(err).ToNot(HaveOccurred())
-
 					Expect(result.UserID).To(Equal(mockUser.UserID))
 					mockUser.ID = result.ID
 					Expect(result).To(Equal(mockUser))

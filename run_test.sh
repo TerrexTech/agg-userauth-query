@@ -50,9 +50,9 @@ sleep 10
 
 docker-compose up -d --build --force-recreate agg-userauth-cmd
 echo "Waiting for agg-userauth-cmd to initialize"
-sleep 10
 
 docker-compose up -d --build --force-recreate agg-userauth-query
+echo "Waiting for agg-userauth-query to initialize"
 sleep 5
 
 docker ps -a

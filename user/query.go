@@ -45,7 +45,7 @@ func Query(collection *mongo.Collection, event *model.Event) *model.KafkaRespons
 
 	result, err := collection.FindOne(filter)
 	if err != nil {
-		err = errors.Wrap(err, "Query: Error in DeleteMany")
+		err = errors.Wrap(err, "Query: Error in FindOne")
 		log.Println(err)
 		return &model.KafkaResponse{
 			AggregateID:   event.AggregateID,
